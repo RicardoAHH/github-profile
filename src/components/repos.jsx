@@ -35,12 +35,12 @@ export default function Repos({ search }) {
     return (
         <>
             {displayedRepos.map((repo) => (
-                <a key={repo.id} href={repo.html_url} target="blank" className="h-[150px] w-[90%] bg-linear-to-r from-[#121729] to-[#1c1b47] rounded-xl flex flex-col justify-center pl-5 gap-2">
+                <a key={repo.id} href={repo.html_url} target="blank" className="min-h-[150px] w-[320px] md:w-[350px] lg:w-[450px] xl:w-[600px] bg-linear-to-r from-[#121729] to-[#1c1b47] rounded-xl flex flex-col justify-center p-5 gap-2">
                     <h2 className="text-white font-semibold text-[20px]">{repo.name}</h2>
                     <p className="text-[#97A3B6] text-sm">{repo.description}</p>
-                    <div className="flex w-[100%] itmes-center justify-left gap-5">
+                    <div className="flex flex-wrap w-[100%] itmes-center justify-left gap-x-5 gap-y-2">
                         <span className="flex items-center justify-center">
-                            <img src="/Chield_alt.svg" alt="chield" />
+                            {repo.license === null ? "" : <img src="/Chield_alt.svg" alt="chield" />}
                             <p className="text-[#97A3B6] font-semibold text-sm">{repo.license === null ? "" : repo.license.spdx_id}</p>
                         </span>
                         <span className="flex items-center justify-center">
@@ -60,7 +60,7 @@ export default function Repos({ search }) {
             {hasMoreRepos && (
                 <button
                     onClick={handleViewAllClick}
-                    className="mt-2 mb-4 py-2 px-4 bg-[#20293a] hover:bg-blue-700 text-white font-semibold rounded-md transition duration-300 ease-in-out"
+                    className="w-[100%] mt-2 mb-4 py-2 px-4 bg-[#20293a] hover:bg-blue-700 text-white font-semibold rounded-md transition duration-300 ease-in-out"
                 >
                     View all repositories
                 </button>

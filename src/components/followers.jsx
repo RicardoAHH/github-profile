@@ -17,7 +17,7 @@ export default function Followers({ search }) {
 
 
     return (
-        <div className='flex flex-wrap mt-25 ml-5 gap-5'>
+        <div className='flex flex-wrap mt-25 sm:mt-5 sm:ml-35 lg:ml-40 xl:ml-45 ml-5 gap-5 mr-15'>
             <div className='h-[40px] w-fit rounded-lg bg-[#111629] flex items-center justify-center '>
                 <div className='h-[30px] bg-[#111629] border-r-1 border-white flex items-center justify-center'>
                     <p className='text-white text-sm p-4 text-center'>Followers</p>

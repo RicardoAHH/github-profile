@@ -19,11 +19,11 @@ function App() {
         <Followers
           search={search}
         />
-        <div className='w-full h-20 pl-5 mt-5'>
+        <div className='w-full h-20 pl-5 lg:pl-12 xl:pl-17 mt-5'>
           <h1 className='text-white font-semibold text-[30px]'>GitHub</h1>
           <p className='text-white text-sm'>How people build software</p>
         </div>
-        <div className='flex flex-col items-center justify-center gap-6'>
+        <div className='flex max-sm:flex-col flex-wrap  items-center justify-center gap-6 xl:gap-x-10'>
           <Repos search={search} />
         </div>
 
