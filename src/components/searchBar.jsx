@@ -55,7 +55,7 @@ export default function SearchBar({ setSearch }) {
 
     return (
         <>
-            <div className='w-[90%] h-[35px] bg-[#20293a] rounded-lg absolute top-3 left-[50%] -translate-x-1/2 flex items-center justify-center'>
+            <div className='w-[340px] md:w-[400px] xl:w-[450px] h-[40px] bg-[#20293a] rounded-lg absolute top-3 left-[50%] -translate-x-1/2 flex items-center justify-center'>
                 <form onSubmit={handleSubmit} className=" w-full pl-2 flex ">
                     <img src="/Search.svg" alt="search" className="w-4" />
                     <input type="text" onChange={handleInputChange} value={inputValue} placeholder="username" className="text-white placeholder-white ml-2 text-sm mb-1 focus:outline-none w-full h-full" />
